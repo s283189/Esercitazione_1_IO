@@ -38,7 +38,7 @@ int main()
     cout << "Valori dal file " << inputFileName << ":" << endl;
     while (inputFile >> value)
     {
-        cout << value << setprecision(17) << endl;
+        cout << value << scientific << setprecision(17) << endl;
     }
 
     // Chiudo il file di input e riapro per tornare all'inizio
@@ -54,8 +54,9 @@ int main()
         ++N;
         double mean = sum / N;
         // Scrivo i risultati nel file result con 16 cifre significative
-        outputFile << N << " " << fixed << setprecision(16) << mean << endl;
+        outputFile << N << " " << fixed << scientific << setprecision(16) << mean << endl;
     }
+
 
     cout << "Il risultato e' stato scritto nel file " << outputFileName << endl;
 
