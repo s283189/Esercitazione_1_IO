@@ -36,9 +36,10 @@ int main()
 
     // Lettura dei valori dal file
     cout << "Valori dal file " << inputFileName << ":" << endl;
+    cout << scientific << setprecision(16);
     while (inputFile >> value)
     {
-        cout << value << scientific << setprecision(17) << endl;
+        cout << value << endl;
     }
 
     // Chiudo il file di input e riapro per tornare all'inizio
